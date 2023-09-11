@@ -19,11 +19,11 @@ int main(){
     char game[3][3] = {{' ', ' ' , ' '},
                        {' ', ' ' , ' '},
                        {' ', ' ' , ' '} }; // Tic-tac-toe
-    bool player2_turn = true; // false for player 1's player2_turn, true for player 2's player2_turn. Player 1 first.
-    int n;
     const char player1 = 'X';
     const char player2 = 'O';
     cout << player1 << " = Player 1" << endl << player2 <<" = Player 2" << endl;
+    bool player2_turn = true; // false for player 1's player2_turn, true for player 2's player2_turn. Player 1 first.
+    int n;
     for (n = 0; n < 9; n++){
         char character;
         player2_turn = !player2_turn;  // use the not-operator to change true to false or false to true.
@@ -37,7 +37,7 @@ int main(){
         }
         cout << "Which cell to mark? i:[1..3], j:[1..3]: ";
         cin >> i >> j;
-        while ((i < 1 || i > 3 || j < 1 || j > 3) || (game[i - 1][j - 1] == 'X' or game[i - 1][j - 1] == 'O')) {
+        while ((i < 1 || i > 3 || j < 1 || j > 3) || (game[i - 1][j - 1] == 'X' || game[i - 1][j - 1] == 'O')) {
             cout << "Invalid input! Try again." << endl;
             cout << "Which cell to mark? i:[1..3], j:[1..3]: ";
             cin >> i >> j;
