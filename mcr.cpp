@@ -31,6 +31,9 @@ int main(){
 				cout << "Player 2: ";
 			cout << "Which cell to mark? i:[1..3], j:[1..3]: "; 
 			cin >> i >> j;
+	       		if(i<0 || i>3 ||j<0 ||j>3){
+				throw("your number is not correct!");
+			}
 			if (turn == false)
 			   game[i][j] = 'X';
 			else 
